@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript">/*jsBundle*/</script>
+	<script id="json-libdoc" type="application/json">/*libJSON*/</script>
+</head>
+
+<body x-data="lib">
+	<div class="nav">
+	</div>
+	<div class="main">
+		<h1 x-text="name"></h1>
+
+		<p x-html="doc"></p>
+
+		<!-- keywords -->
+		<h2>Keywords</h2>
+		<template x-for="keyword in keywords">
+			<div>
+				<h3 x-text="keyword.name"></h3>
+				args:
+				<template x-for="arg in keyword.args">
+					<div x-text="arg.name"></div>
+				</template>
+			</div>
+		</template>
+	</div>
+</body>
+
+</html>
